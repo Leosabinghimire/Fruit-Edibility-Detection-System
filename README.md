@@ -13,4 +13,5 @@ This is a machine learning-based system designed to detect the edibility of frui
 3. Run the `project.ipynb` Jupyter notebook to start the classification process.
 
 This addition explains how to launch the Gradio interface with the `share=True` option, ensuring that users can make the application accessible via a public URL. Let me know if you need further changes!
+
 iface.launch(share=True)
