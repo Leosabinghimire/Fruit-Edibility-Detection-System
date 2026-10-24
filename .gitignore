@@ -1,0 +1,4 @@
+__pycache__/
+.playwright-mcp/
+clip_embeddings_cache.npz
+fruit_model.keras
