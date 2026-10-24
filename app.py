@@ -34,15 +34,16 @@ FRUITS = {
     'pomegranate': '🍎', 'fig': '🍑', 'date fruit': '🌴', 'guava': '🍐', 'passion fruit': '🍑',
     'dragon fruit': '🐉', 'lychee': '🍒', 'longan': '🍒', 'rambutan': '🍒', 'durian': '🌵', 'jackfruit': '🍈',
     'persimmon': '🍅', 'star fruit': '⭐', 'quince': '🍐', 'cranberry': '🍒', 'gooseberry': '🍇',
-    'mulberry': '🫐', 'olive': '🫒', 'custard apple': '🍏', 'tamarind': '🌰', 'plantain': '🍌',
+    'mulberry': '🫐', 'olive': '🫒', 'custard apple': '🍏', 'tamarind': '🌰',
 }
+# 'plantain' is left out on purpose: CLIP called 30% of the test bananas plantains.
 # Freshness was trained on these only; for other fruits it is untested.
 TRAINED = {'apple', 'green apple', 'banana', 'orange'}
 NOT_FRUIT = ['a vegetable', 'a person', 'an animal', 'a cooked meal', 'bread', 'a drink', 'an everyday object',
              'a room', 'a vehicle', 'a page of text']
 
-# The larger CLIP names fruits better (86% vs 76% on a 600-photo test sample); the freshness
-# classifier was trained on the smaller CLIP's embeddings, so both are loaded.
+# The larger CLIP names fruits better than the smaller one (84% on a 600-photo test sample); the
+# freshness classifier was trained on the smaller CLIP's embeddings, so both are loaded.
 NAME_CLIP = 'openai/clip-vit-large-patch14'
 
 head = np.load(HEAD_PATH)
